@@ -65,7 +65,6 @@ class FullHouse extends Rule{
     // Is at least one of the frequencies
     // for the values three.
     const d = new Set(dice);
-    console.log("What is freq.dice", this.freq(dice));
     return d.size === 2 && (this.freq(dice).includes(3)) ?
     this.score : 0;
   }
@@ -81,9 +80,9 @@ class SmallStraight extends Rule {
     let a2 = [2,3,4,5];
     let a3 = [3,4,5,6];
 
-    return (dice.every(val => a1.includes(val)) || 
-            dice.every(val => a2.includes(val)) ||
-            dice.every(val => a3.includes(val))) ? 
+    return (a1.every(val => dice.includes(val)) || 
+            a2.every(val => dice.includes(val)) ||
+            a3.every(val => dice.includes(val))) ? 
             this.score : 0;
   }
 }
