@@ -8,7 +8,7 @@ let wrapper;
 // Smoke test for Die
 it('renders without crashing', () => {
     shallow(<Die />);
-  });
+});
 
 // Snapshot test for unlocked die
 it("matches unlocked snapshot", function (){
