@@ -73,8 +73,19 @@ class FullHouse extends Rule{
 
 /** Check for small straights. */
 
-class SmallStraight {
-  // TODO
+class SmallStraight extends Rule {
+  //if small straigh then the array of dice must contain one of these three:
+  //[1,2,3,4], [2,3,4,5], [3,4,5,6]
+  evalRoll = (dice) => {
+    let a1 = [1,2,3,4];
+    let a2 = [2,3,4,5];
+    let a3 = [3,4,5,6];
+
+    return (dice.every(val => a1.includes(val)) || 
+            dice.every(val => a2.includes(val)) ||
+            dice.every(val => a3.includes(val))) ? 
+            this.score : 0;
+  }
 }
 
 /** Check for large straights. */
@@ -113,7 +124,7 @@ const fourOfKind = new SumDistro({ count: 4 });
 const fullHouse = new FullHouse({ score: 25 });
 
 // small/large straights score as 30/40
-const smallStraight = "TODO";
+const smallStraight = new SmallStraight({ score: 30 });
 const largeStraight = new LargeStraight({ score: 40 });
 
 // yahtzee scores as 50
