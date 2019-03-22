@@ -71,6 +71,8 @@ class Game extends Component {
         <Dice dice={this.state.dice} locked={this.state.locked} handleClick={this.toggleLocked} />
         <button
           className="Game-reroll"
+          // Checks to see if every "die" in locked array
+          // is true or not. If true, button disable set to true.
           disabled={this.state.locked.every(x => x)}
           onClick={this.roll}>
           {this.state.rollsLeft} Rerolls Left

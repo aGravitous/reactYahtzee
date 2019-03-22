@@ -9,6 +9,12 @@ class ScoreTable extends Component {
   render() {
     const { scores, doScore } = this.props;
 
+
+// ###.evalRoll: Each evalRoll is determined by the rule
+// with which it is associated. It calls the function
+// that calls the mathematical procedure to determine
+// the correct score.
+
     return (
       <div className="ScoreTable">
         <section className="ScoreTable-section">
