@@ -59,12 +59,13 @@ class SumDistro extends Rule {
 
 /** Check if full house (3-of-kind and 2-of-kind) */
 
-class FullHouse {
+class FullHouse extends Rule{
   evalRoll = (dice) => {
     // Are there only two different values and 
     // Is at least one of the frequencies
     // for the values three.
     const d = new Set(dice);
+    console.log("What is freq.dice", this.freq(dice));
     return d.size === 2 && (this.freq(dice).includes(3)) ?
     this.score : 0;
   }
