@@ -3,21 +3,6 @@ import React from "react";
 import { shallow, mount } from "enzyme";
 
 let wrapper;
-// let sets = {scores: {
-//     ones: undefined,
-//     twos: undefined,
-//     threes: undefined,
-//     fours: undefined,
-//     fives: undefined,
-//     sixes: undefined,
-//     threeOfKind: undefined,
-//     fourOfKind: undefined,
-//     fullHouse: undefined,
-//     smallStraight: undefined,
-//     largeStraight: undefined,
-//     yahtzee: undefined,
-//     chance: 0
-//   }}
 
 // Smoke test for Game
 it('renders without crashing', () => {
